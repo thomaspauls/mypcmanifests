@@ -3,7 +3,7 @@ kind: StorageClass
 metadata:
   name: azure-disk-managed-pv
 provisioner: disk.csi.azure.com
-reclaimPolicy: Retain  # Default is Delete, recommended is retain
+reclaimPolicy: Delete  # Default is Delete, recommended is retain
 volumeBindingMode: WaitForFirstConsumer # Default is Immediate, recommended is WaitForFirstConsumer
 allowVolumeExpansion: true  
 parameters:
