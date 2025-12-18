@@ -36,7 +36,7 @@ spec:
           mountPath: /root/.ollama
         tty: true
 
-    volumes: 
+      volumes: 
         - name: ollama-volume
           persistentVolumeClaim:
             claimName: azure-managed-disk-pvc
