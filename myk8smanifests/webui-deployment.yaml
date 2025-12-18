@@ -27,8 +27,8 @@ spec:
             memory: "1Gi"
         env:
         - name: OLLAMA_BASE_URL
-          #value: "http://ollama-service.ollama.svc.cluster.local:11434"
-          value: "172.16.48.14:11434"
+          value: "http://ollama-service.ollama.svc.cluster.local:11434"
+          #value: "172.16.48.14:11434"
         - name: WEBUI_AUTH
           value: "True"
         
