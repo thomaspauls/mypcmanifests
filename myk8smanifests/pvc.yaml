@@ -5,10 +5,10 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  storageClassName: managed-premium-retain-sc 
+  storageClassName: azure-disk-managed-pv
   resources:
     requests:
-      storage: 5Gi      
+      storage: 2Gi      
 
 # AKS already provisioned Storage classes managed-premium and default as part of 
 # default cluster setup      
