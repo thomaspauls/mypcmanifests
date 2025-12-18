@@ -1,8 +1,8 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: azure-disk-managed-pv
-provisioner: disk.csi.azure.com
+  name: managed-premium-retain-sc
+provisioner: kubernetes.io/azure-disk
 reclaimPolicy: Delete  # Default is Delete, recommended is retain
 volumeBindingMode: WaitForFirstConsumer # Default is Immediate, recommended is WaitForFirstConsumer
 allowVolumeExpansion: true  
