@@ -35,17 +35,12 @@ spec:
         - name: ollama-volume
           mountPath: /root/.ollama
         tty: true
-
-      volumes: 
-        - name: ollama-volume
-          persistentVolumeClaim:
-            claimName: azure-managed-disk-pvc
-
-  #volumeClaimTemplates:
-  #- metadata:
-  #    name: ollama-volume
-  #  spec:
-  #    accessModes: [ "ReadWriteOnce" ]
-  #    resources:
-  #      requests:
-  #        storage: 90Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: ollama-volume
+    spec:
+      storageClassName: managed-premium-retain-sc
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 90Gi
